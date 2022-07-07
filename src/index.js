@@ -1,3 +1,4 @@
+import { Container } from '@mui/system';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Header from './page/Header';
@@ -6,7 +7,13 @@ import Home from './page/Home';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <Header/>
+  <>
+    <Header/>
+  <Container>
+  <Home />
+</Container>
+  </>
+
 );
 
 // If you want to start measuring performance in your app, pass a function

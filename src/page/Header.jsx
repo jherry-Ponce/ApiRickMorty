@@ -50,9 +50,9 @@ const Header=()=>{
           </div>
         </div>
       </nav>
-      <Container>
+     {/*  <Container>
         <Home valor={dato}/>
-     </Container>
+     </Container> */}
     </>
     )
 }

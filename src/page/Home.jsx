@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react"
 import { getDataApi } from "../service/apirick";
+import { Modall } from "./Modal";
 
 import * as React from 'react';
 import Card from '@mui/material/Card';
@@ -9,13 +10,13 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea, Grid } from '@mui/material';
 
-const Home=(valor)=>{
+const Home=()=>{
 
 
     const [datos, setDatos] = useState([]);
     useEffect(()=>{
         getDataApi().then((data)=>setDatos((data.results)));
-    },[valor])
+    },[])
     console.log(datos);
     return(
         <>
@@ -40,6 +41,7 @@ const Home=(valor)=>{
                                 {info.name}
                             </Typography>
                             <Typography variant="body2" color="text.secondary">
+                                <Modall valor={info.image}/>
                                 <h5>Especie: {info.species}</h5>
                                 <h5>Estado: {info.status}</h5>
                                 <h5>Genero: {info.gender}</h5>
